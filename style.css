@@ -39,6 +39,7 @@ img {
 
 .letter-row {
   display: flex;
+
 }
 
 #keyboard-cont-cont {
@@ -59,6 +60,8 @@ img {
 
 #keyboard-cont div {
   display: flex;
+  overflow: auto;
+
 }
 
 .center {
