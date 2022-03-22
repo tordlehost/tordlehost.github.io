@@ -162,7 +162,7 @@ async function generateScoreCard () {
     await navigator.clipboard.writeText(result);
     toastr.options.closeButton = true;
     let html_result = result.replace(/(?:\r\n|\r|\n)/g, "</br>")
-    toastr.success("You got it! Game over!</br></br>Result is copied to clipboard.</br></br>" + html_result)
+    toastr.success("Yup, that's a turtle! Game over!</br></br>Result is copied to clipboard.</br></br>" + html_result +  "</br><a href='www.tordle.us'>www.tordle.us</a>")
   }
 
 function GetFormattedDate() {
