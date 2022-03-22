@@ -41,11 +41,18 @@ img {
   display: flex;
 }
 
+#keyboard-cont-cont {
+  width: 100%;
+  overflow: auto;
+}
+
 #keyboard-cont {
   margin: 1rem 0;
   left: 50%;
   top: 50%;
+  padding: 0px 50px;
   display: flex;
+  overflow: auto;
   flex-direction: column;
   align-items: center;
 }
