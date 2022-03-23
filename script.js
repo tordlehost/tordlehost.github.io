@@ -10,13 +10,11 @@ let rightGuessString = ANSWER[Math.floor(Math.random() * ANSWER.length)]
 
 function initBoard() {
     let board = document.getElementById("game-board");
+    document.getElementById("h1").innerHTML = "Tordle  " + GetFormattedDate();
 
     for (let i = 0; i < 6; i++) {
         emojiArray[i] = ["white", "white", "white", "white", "white", "white"];
     }
-
-    //var element = document.getElementById("about");
-    //element.setAttribute("onclick", about)
 
     for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
         let row = document.createElement("div")
@@ -170,6 +168,10 @@ async function generateScoreCard () {
     console.log(clip_result)
     await navigator.clipboard.writeText(clip_result);
     toastr.options.closeButton = true;
+    toastr.options.tapToDismiss= false;
+    toastr.options.extendedTimeOut = 0;
+    toastr.options.timeOut = 0;
+
     let html_result = result.replace(/(?:\r\n|\r|\n)/g, "</br>")
     toastr.success("Yup, that's a turtle! Game over!</br></br>Result is copied to clipboard.</br></br>" + html_result +  "</br><a href='www.tordle.us'>www.tordle.us</a>")
   }
