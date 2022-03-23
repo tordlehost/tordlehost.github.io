@@ -14,6 +14,10 @@ function initBoard() {
     for (let i = 0; i < 6; i++) {
         emojiArray[i] = ["white", "white", "white", "white", "white", "white"];
     }
+
+    //var element = document.getElementById("about");
+    //element.setAttribute("onclick", about)
+
     for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
         let row = document.createElement("div")
         row.className = "letter-row"
@@ -157,9 +161,14 @@ async function generateScoreCard () {
           break;
       }
      }
+
      result = result + "\n";
     }
-    await navigator.clipboard.writeText(result);
+    var link = "\nhttp://www.tordle.us"
+    link.link("http://www.tordle.us")
+    var clip_result = result + link
+    console.log(clip_result)
+    await navigator.clipboard.writeText(clip_result);
     toastr.options.closeButton = true;
     let html_result = result.replace(/(?:\r\n|\r|\n)/g, "</br>")
     toastr.success("Yup, that's a turtle! Game over!</br></br>Result is copied to clipboard.</br></br>" + html_result +  "</br><a href='www.tordle.us'>www.tordle.us</a>")
@@ -169,6 +178,14 @@ function GetFormattedDate() {
     var d = new Date();
     var datestring = (d.getMonth()+1)  + "/" + d.getDate() + "/" + d.getFullYear()
     return datestring;
+}
+
+function about() {
+  toastr.options.closeButton = true;
+  toastr.options.extendedTimeOut= 1000;
+  toastr.options.timeOut= 1000;
+  toastr.options.tapToDismiss= false;
+  toastr.success("Tordle challenges you to find the animal in the picture.</br>After each guess, letters in the correct position will be green,</br> letters in the word but in the wrong position will be yellow, </br> and letters not in the word will be gray. </br> You have six guesses, good luck!")
 }
 
 function insertLetter (pressedKey) {
