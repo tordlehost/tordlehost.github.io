@@ -51,7 +51,7 @@ img {
   margin: 1rem 0;
   left: 50%;
   top: 50%;
-  padding: 0vw 10vw;
+  padding: 0vw 40vw;
   display: flex;
   overflow: auto;
   flex-direction: column;
@@ -73,6 +73,7 @@ img {
 .second-row {
   margin: 0.5rem 0;
   margin: calc(var(--e) / 2);
+  position: relative;
 }
 
 .keyboard-button {
@@ -88,8 +89,20 @@ img {
   width: 50%;
 }
 
+.first-row {
+  position: relative;
+  overflow: auto;
+}
+
 .second-row {
   margin: 0.5rem 0;
+  position: relative;
+  overflow: auto;
+}
+
+.third-row {
+  position: relative;
+  overflow: auto;
 }
 
 .keyboard-button {
@@ -151,6 +164,13 @@ img {
   float: right;
 }
 
+@media screen and (max-width: 450px) {
+  .keyboard-button{
+     font-size: 1rem;
+  font-weight: 600;
+  padding: 0.1rem;
+  }
+}
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 /*@media screen and (max-width: 500px) {
   .header button {
