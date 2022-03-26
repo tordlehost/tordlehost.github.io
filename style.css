@@ -164,11 +164,30 @@ img {
   float: right;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 370px) {
   .keyboard-button{
      font-size: 1rem;
   font-weight: 600;
   padding: 0.1rem;
+  transform: translate(10%, 0%);
+  }
+  .first-row {
+    position: relative;
+    overflow: auto;
+    transform: translate(10%, 0%);
+  }
+
+  .second-row {
+    margin: 0.5rem 0;
+    position: relative;
+    overflow: auto;
+    transform: translate(10%, 0%);
+  }
+
+  .third-row {
+    position: relative;
+    overflow: auto;
+    transform: translate(10%, 0%);
   }
 }
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
