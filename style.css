@@ -79,7 +79,7 @@ img {
 .keyboard-button {
   font-size: var(--e);
   font-weight: 700;
-  padding: calc(var(--e) / 2);
+  padding: calc(var(--e) / 3);
   margin: 0 2px;
   cursor: pointer;
   text-transform: uppercase;
@@ -164,6 +164,7 @@ img {
   float: right;
 }
 
+/*
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 812px)
@@ -193,6 +194,7 @@ img {
     transform: translate(10%, 0%);
   }
 }
+*/
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 /*@media screen and (max-width: 500px) {
   .header button {
